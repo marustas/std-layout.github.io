@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Layout Master</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <nav class="zone blue sticky">
+        <ul class="main-nav">
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">OurTeam</a></li>
+            <li class="push"><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="backButton">
+      <button class="button" role="button" onclick ="goBack()">Go back</button>
+    </div>
+    <div class="questionBox">
+      <p>A question:</p>
+    </div>
+    <div class="choices">
+      <input type="radio" id="choice1" name="choice" value="1">
+      <label for="choice1">1</label><br>
+      <input type="radio" id="choice2" name="choice" value="2">
+      <label for="choice2">2</label><br>
+      <input type="radio" id="choice3" name="choice" value="3">
+      <label for="choice3">3</label><br>
+      <input type="radio" id="choice4" name="choice" value="4">
+      <label for="choice2">4</label><br>
+    </div>
+    <div class="nextQuestionButton">
+      <button class="button" role="button" onclick ="nextQuestion()">Next question</button>
+    </div>
+    <script>
+      function goBack() {
+        window.location.href = "index.html";
+    }
+      function nextQuestion() {
+
+      }
+ </script>
+</body>
+
+</html>
