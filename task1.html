@@ -12,36 +12,56 @@
             <li><a href="">About</a></li>
             <li><a href="">Products</a></li>
             <li><a href="">OurTeam</a></li>
+            <li><button class="button" role="button" onclick="goBack()">Home</button></li>
             <li class="push"><a href="">Contact</a></li>
         </ul>
     </nav>
     <div class="backButton">
-      <button class="button" role="button" onclick ="goBack()">Go back</button>
     </div>
-    <div class="questionBox">
-      <p>A question:</p>
-    </div>
-    <div class="choices">
-      <input type="radio" id="choice1" name="choice" value="1">
-      <label for="choice1">1</label><br>
-      <input type="radio" id="choice2" name="choice" value="2">
-      <label for="choice2">2</label><br>
-      <input type="radio" id="choice3" name="choice" value="3">
-      <label for="choice3">3</label><br>
-      <input type="radio" id="choice4" name="choice" value="4">
-      <label for="choice2">4</label><br>
-    </div>
-    <div class="nextQuestionButton">
-      <button class="button" role="button" onclick ="nextQuestion()">Next question</button>
+    <div class="courseContent">
+        <ol>
+            <li>
+                Calculus:
+                <ul>
+                    <li>Limits and continuity</li>
+                    <li>Derivatives</li>
+                    <li>Integrals and their applications</li>
+                    <li>Sequences and series</li>
+                </ul>
+            </li>
+            <li>
+                Analytical geometry:
+                <ul>
+                    <li>Coordinate systems</li>
+                    <li>Conic sections</li>
+                    <li>Plane curves</li>
+                </ul>
+            </li>
+            <li>
+                Probability and statistics:
+                <ul>
+                    <li>Probability theory</li>
+                    <li>Random variables and distributions</li>
+                    <li>Descriptive statistics</li>
+                    <li>Inferential statistics and hypothesis testing</li>
+                </ul>
+            </li>
+            <li>
+                Linear algebra:
+                <ul>
+                    <li>Matrices and systems of linear equations </li>
+                    <li>Determinants and their properties</li>
+                    <li>Eigenvalues and eigenvectors</li>
+                    <li>Vector spaces</li>
+                </ul>
+            </li>
+        </ol>
     </div>
     <script>
-      function goBack() {
-        window.location.href = "index.html";
-    }
-      function nextQuestion() {
-
-      }
- </script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 
 </html>

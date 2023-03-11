@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Layout Master</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <nav class="zone blue sticky">
+        <ul class="main-nav">
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">OurTeam</a></li>
+            <li><button class="button" role="button" onclick="goBack()">Home</button></li>
+            <li class="push"><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="backButton">
+    </div>
+    <div class="courseContent">
+        <ol>
+            <li>
+                Mechanics:
+                <ul>
+                    <li>Kinematics and dynamics</li>
+                    <li>Work, energy, and power</li>
+                    <li>Momentum and collisions</li>
+                    <li>Rotational motion</li>
+                </ul>
+            </li>
+            <li>
+                Thermodynamics:
+                <ul>
+                    <li>Temperature and heat</li>
+                    <li>The laws of thermodynamics</li>
+                    <li>Heat engines and refrigerators</li>
+                    <li>Entropy</li>
+                </ul>
+            </li>
+            <li>
+                Waves and optics:
+                <ul>
+                    <li>Waves and oscillations</li>
+                    <li>Sound and acoustics</li>
+                    <li>Electromagnetic waves</li>
+                    <li>Geometric and wave optics</li>
+                </ul>
+            </li>
+            <li>
+                Electricity and magnetism:
+                <ul>
+                    <li>Electric fields and potential</li>
+                    <li>Capacitance and electric circuits</li>
+                    <li>Magnetic fields and forces</li>
+                    <li>Electromagnetic induction</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>
