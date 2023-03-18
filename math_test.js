@@ -1,30 +1,50 @@
 const Questions = [{
         id: 0,
-        q: "What is capital of India?",
-        a: [{ text: "gandhinagar", isCorrect: false },
-            { text: "Surat", isCorrect: false },
-            { text: "Delhi", isCorrect: true },
-            { text: "mumbai", isCorrect: false }
+        q: "What is the integral of 2x^2 + 3x - 1 with respect to x?",
+        a: [{ text: "x^3 + 1.5x^2 - x + C", isCorrect: true },
+            { text: "x^3 + 1.5x^2 - C", isCorrect: false },
+            { text: "x^2 + 1.5x - x + C", isCorrect: false },
+            { text: "2/3x^3 + 1.5/2x^2 - x + C", isCorrect: false }
         ]
 
     },
     {
         id: 1,
-        q: "What is the capital of Thailand?",
-        a: [{ text: "Lampang", isCorrect: false, isSelected: false },
-            { text: "phuket", isCorrect: false },
-            { text: "Ayutthaya", isCorrect: false },
-            { text: "Bangkok", isCorrect: true }
+        q: "Evaluate the integral of e^x * cos(x) with respect to x:",
+        a: [{ text: "e^x * sin(x) + C", isCorrect: false, isSelected: false },
+            { text: "e^x * cos(x) + C", isCorrect: true },
+            { text: "e^x * (sin(x) + cos(x)) + C", isCorrect: false },
+            { text: "e^x * (cos(x) - sin(x)) + C", isCorrect: false }
         ]
 
     },
     {
         id: 2,
-        q: "What is the capital of Gujarat",
-        a: [{ text: "surat", isCorrect: false },
-            { text: "vadodara", isCorrect: false },
-            { text: "gandhinagar", isCorrect: true },
-            { text: "rajkot", isCorrect: false }
+        q: "Calculate the integral of 1/x with respect to x:",
+        a: [{ text: "ln|x| + C", isCorrect: true },
+            { text: " ln(x) + C", isCorrect: false },
+            { text: "x + C", isCorrect: false },
+            { text: "1/2x^2 + C", isCorrect: false }
+        ]
+
+    },
+    {
+        id: 3,
+        q: "Find the integral of (x^2 + 2x + 1) / (x + 1) with respect to x:",
+        a: [{ text: "x^2 + 2x - 3ln|x+1| + C", isCorrect: true },
+            { text: "x^2 + 2x + ln|x+1| + C", isCorrect: false },
+            { text: "x^2 + 2x - ln|x+1| + C", isCorrect: false },
+            { text: "x^2 + 2x + 3ln|x+1| + C", isCorrect: false }
+        ]
+
+    },
+    {
+        id: 4,
+        q: "Evaluate the integral of (2x + 1) / (x^2 + x + 1) with respect to x:",
+        a: [{ text: "ln|x^2 + x + 1| + C", isCorrect: false },
+            { text: "2ln|x^2 + x + 1| + C", isCorrect: false },
+            { text: "ln|x^2 + x + 1| - 2ln|x+1| + C", isCorrect: false },
+            { text: "ln|x^2 + x + 1| + 2ln|x+1| + C", isCorrect: true }
         ]
 
     }
@@ -130,7 +150,7 @@ var id = 0;
 
 next.addEventListener("click", () => {
     start = false;
-    if (id < 2) {
+    if (id < 4) {
         id++;
         iterate(id);
         console.log(id);
