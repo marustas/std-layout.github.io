@@ -19,13 +19,33 @@
     </nav>
     <div class="backButton">
     </div>
-    <div>
-        <p>Solve the following integral:</p>
-        <img src="img/integral.jpeg">
-    </div>
-    <div>
-        <input type="radio" id="choice1" name="choice" value="1">
-        <label for="choice1">
+    <div class="panel">
+        <div class="result">
+
+        </div>
+        <div class="question-container" id="question">
+            Question goes here.
+        </div>
+        <div class="option-container">
+            <button class="option" onclick="" id="op1">option1</button>
+
+            <button class="option" id="op2">option2</button>
+
+            <button class="option" id="op3">option3</button>
+
+            <button class="option" id="op4">option4</button>
+        </div>
+        <div class="navigation">
+            <button class="evaluate">Evaluate</button>
+            <button class="next">Next</button>
+        </div>
+        <div>
+            <p>Solve the following integral:</p>
+            <img src="img/integral.jpeg">
+        </div>
+        <div>
+            <input type="radio" id="choice1" name="choice" value="1">
+            <label for="choice1">
             <math xmlns='http://www.w3.org/1998/Math/MathML'>
                 <mrow>
                  <mi>C</mi>
@@ -76,8 +96,8 @@
                 </mrow>
                </math>
         </label><br>
-        <input type="radio" id="choice2" name="choice" value="2">
-        <label for="choice2">
+            <input type="radio" id="choice2" name="choice" value="2">
+            <label for="choice2">
             <math xmlns='http://www.w3.org/1998/Math/MathML'>
                 <mrow>
                  <mi>C</mi>
@@ -128,8 +148,8 @@
                 </mrow>
                </math>
 </label><br>
-        <input type="radio" id="choice3" name="choice" value="3">
-        <label for="choice3">
+            <input type="radio" id="choice3" name="choice" value="3">
+            <label for="choice3">
             <math xmlns='http://www.w3.org/1998/Math/MathML'>
                 <mrow>
                  <mi>C</mi>
@@ -180,8 +200,8 @@
                 </mrow>
                </math>
 </label><br>
-        <input type="radio" id="choice4" name="choice" value="4">
-        <label for="choice2">
+            <input type="radio" id="choice4" name="choice" value="4">
+            <label for="choice2">
             <math xmlns='http://www.w3.org/1998/Math/MathML'>
                 <mrow>
                  <mi>C</mi>
@@ -232,15 +252,16 @@
                 </mrow>
                </math>
             </label><br>
-        <button onclick="handleClick()">Submit</button>
-        <script src="code.js"></script>
-    </div>
+            <button onclick="handleClick()">Submit</button>
+            <script src="code.js"></script>
+            <script src="math_test.js"></script>
+        </div>
 
-    <script>
-        function goBack() {
-            window.location.href = "index.html";
-        }
-    </script>
+        <script>
+            function goBack() {
+                window.location.href = "index.html";
+            }
+        </script>
 </body>
 
 </html>
