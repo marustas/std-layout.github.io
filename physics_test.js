@@ -157,3 +157,14 @@ next.addEventListener("click", () => {
     }
 
 })
+
+const previous = document.getElementsByClassName('previous')[0];
+previous.addEventListener("click", () => {
+    start = false;
+    if (id >= 1) {
+        id--;
+        iterate(id);
+        console.log(id);
+    }
+
+})
