@@ -139,12 +139,12 @@ function iterate(id) {
 
     const finish = document.getElementsByClassName("finish");
     finish[0].addEventListener("click", () => {
-        if (count == 3) {
-            result[0].innerHTML = "LVL2";
+        if (count === 3) {
+            result[0].innerHTML = `<div class= "circle per-50">  <div class = "inner"> LVL2 </div> </div>`;
         } else if (count < 3) {
-            result[0].innerHTML = "LVL1";
+            result[0].innerHTML = `<div class= "circle per-25">  <div class = "inner"> LVL1 </div> </div>`;
         } else {
-            result[0].innerHTML = "LVL3";
+            result[0].innerHTML = `<div class= "circle per-75">  <div class = "inner"> LVL3 </div> </div>`;
         }
     })
 }

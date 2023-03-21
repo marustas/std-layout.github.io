@@ -11,7 +11,7 @@ const Questions = [{
     {
         id: 1,
         q: "What is the kinetic energy of an object with a mass of 5 kg and a velocity of 10 m/s?",
-        a: [{ text: "250 J", isCorrect: true, isSelected: false },
+        a: [{ text: "250 J", isCorrect: true },
             { text: "50 J", isCorrect: false },
             { text: "100 J", isCorrect: false },
             { text: "500 J", isCorrect: false }
@@ -51,9 +51,8 @@ const Questions = [{
 
 ]
 
-// Set start
 var start = true;
-
+var count = 0;
 // Iterate
 function iterate(id) {
 
@@ -96,6 +95,9 @@ function iterate(id) {
         op3.style.backgroundColor = "lightskyblue";
         op4.style.backgroundColor = "lightskyblue";
         selected = op1.value;
+        if (selected == "true") {
+            count++;
+        }
     })
 
     // Show selection for op2
@@ -105,6 +107,9 @@ function iterate(id) {
         op3.style.backgroundColor = "lightskyblue";
         op4.style.backgroundColor = "lightskyblue";
         selected = op2.value;
+        if (selected == "true") {
+            count++;
+        }
     })
 
     // Show selection for op3
@@ -114,6 +119,9 @@ function iterate(id) {
         op3.style.backgroundColor = "lightgoldenrodyellow";
         op4.style.backgroundColor = "lightskyblue";
         selected = op3.value;
+        if (selected == "true") {
+            count++;
+        }
     })
 
     // Show selection for op4
@@ -123,19 +131,19 @@ function iterate(id) {
         op3.style.backgroundColor = "lightskyblue";
         op4.style.backgroundColor = "lightgoldenrodyellow";
         selected = op4.value;
+        if (selected == "true") {
+            count++;
+        }
     })
 
-    // Grabbing the evaluate button
-    const evaluate = document.getElementsByClassName("evaluate");
-
-    // Evaluate method
-    evaluate[0].addEventListener("click", () => {
-        if (selected == "true") {
-            result[0].innerHTML = "True";
-            result[0].style.color = "green";
-        } else {
-            result[0].innerHTML = "False";
-            result[0].style.color = "red";
+    const finish = document.getElementsByClassName("finish");
+    finish[0].addEventListener("click", () => {
+        if (count == 3) {
+            result[0].innerHTML = `<div class= "circle per-50">  <div class = "inner"> LVL2 </div> </div>`;
+        } else if (count < 3) {
+            result[0].innerHTML = `<div class= "circle per-25">  <div class = "inner"> LVL1 </div> </div>`;
+        } else if (count > 3) {
+            result[0].innerHTML = `<div class= "circle per-75">  <div class = "inner"> LVL3 </div> </div>`;
         }
     })
 }
@@ -143,6 +151,8 @@ function iterate(id) {
 if (start) {
     iterate("0");
 }
+
+
 
 // Next button and method
 const next = document.getElementsByClassName('next')[0];
@@ -166,5 +176,4 @@ previous.addEventListener("click", () => {
         iterate(id);
         console.log(id);
     }
-
 })
