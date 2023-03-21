@@ -311,16 +311,18 @@ a {
 
 .next,
 .previous,
-.evaluate {
+.evaluate,
+.finish {
     font-size: large;
-    width: 30%;
+    width: 20%;
     color: #FF665E;
     background-color: white;
 }
 
 .previous:hover,
 .next:hover,
-.evaluate:hover {
+.evaluate:hover,
+.finish:hover {
     color: #FF665E;
     background-color: #444;
 }

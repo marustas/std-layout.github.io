@@ -11,7 +11,7 @@ const Questions = [{
     {
         id: 1,
         q: "Evaluate the integral of e^x * cos(x) with respect to x:",
-        a: [{ text: "e^x * sin(x) + C", isCorrect: false, isSelected: false },
+        a: [{ text: "e^x * sin(x) + C", isCorrect: false },
             { text: "e^x * cos(x) + C", isCorrect: true },
             { text: "e^x * (sin(x) + cos(x)) + C", isCorrect: false },
             { text: "e^x * (cos(x) - sin(x)) + C", isCorrect: false }
@@ -53,7 +53,7 @@ const Questions = [{
 
 // Set start
 var start = true;
-
+var count = 0;
 // Iterate
 function iterate(id) {
 
@@ -96,6 +96,9 @@ function iterate(id) {
         op3.style.backgroundColor = "lightskyblue";
         op4.style.backgroundColor = "lightskyblue";
         selected = op1.value;
+        if (selected == "true") {
+            count++;
+        }
     })
 
     // Show selection for op2
@@ -105,6 +108,9 @@ function iterate(id) {
         op3.style.backgroundColor = "lightskyblue";
         op4.style.backgroundColor = "lightskyblue";
         selected = op2.value;
+        if (selected == "true") {
+            count++;
+        }
     })
 
     // Show selection for op3
@@ -114,6 +120,9 @@ function iterate(id) {
         op3.style.backgroundColor = "lightgoldenrodyellow";
         op4.style.backgroundColor = "lightskyblue";
         selected = op3.value;
+        if (selected == "true") {
+            count++;
+        }
     })
 
     // Show selection for op4
@@ -123,19 +132,19 @@ function iterate(id) {
         op3.style.backgroundColor = "lightskyblue";
         op4.style.backgroundColor = "lightgoldenrodyellow";
         selected = op4.value;
+        if (selected == "true") {
+            count++;
+        }
     })
 
-    // Grabbing the evaluate button
-    const evaluate = document.getElementsByClassName("evaluate");
-
-    // Evaluate method
-    evaluate[0].addEventListener("click", () => {
-        if (selected == "true") {
-            result[0].innerHTML = "True";
-            result[0].style.color = "green";
+    const finish = document.getElementsByClassName("finish");
+    finish[0].addEventListener("click", () => {
+        if (count == 3) {
+            result[0].innerHTML = "LVL2";
+        } else if (count < 3) {
+            result[0].innerHTML = "LVL1";
         } else {
-            result[0].innerHTML = "False";
-            result[0].style.color = "red";
+            result[0].innerHTML = "LVL3";
         }
     })
 }
@@ -143,6 +152,8 @@ function iterate(id) {
 if (start) {
     iterate("0");
 }
+
+
 
 // Next button and method
 const next = document.getElementsByClassName('next')[0];
@@ -166,5 +177,4 @@ previous.addEventListener("click", () => {
         iterate(id);
         console.log(id);
     }
-
 })
