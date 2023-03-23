@@ -91,25 +91,21 @@ with respect to x?`,
               <mn>2</mn>
               <mrow>
                <mn>3</mn>
+               </mfrac>
                <mo>&#8290;</mo>
                <msup>
                 <mi>x</mi>
                 <mn>3</mn>
                </msup>
               </mrow>
-             </mfrac>
              <mo>+</mo>
-             <mfrac>
               <mn>1.5</mn>
               <mrow>
-               <mn>2</mn>
-               <mo>&#8290;</mo>
                <msup>
                 <mi>x</mi>
                 <mn>2</mn>
                </msup>
               </mrow>
-             </mfrac>
              <mo>-</mo>
              <mi>x</mi>
             </mrow>
