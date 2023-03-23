@@ -617,7 +617,9 @@ function iterate(id) {
 
     // Getting the result display section
     var result = document.getElementsByClassName("result");
+    var advice = document.getElementsByClassName("advice");
     result[0].innerText = "";
+    advice[0].innerText = "";
 
     // Getting the question
     const question = document.getElementById("question");
@@ -704,6 +706,202 @@ function iterate(id) {
         } else {
             result[0].innerHTML = `<div class= "circle per-75">  <div class = "inner"> LVL3 </div> </div>`;
         }
+    })
+
+    const help = document.getElementsByClassName("help");
+    help[0].addEventListener("click", () => {
+        if (id == 0)
+            advice[0].innerHTML = `
+            <p>To integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mrow>
+              <mn>2</mn>
+              <mo>&#8290;</mo>
+              <msup>
+               <mi>x</mi>
+               <mn>2</mn>
+              </msup>
+             </mrow>
+             <mo>+</mo>
+             <mrow>
+              <mn>3</mn>
+              <mo>&#8290;</mo>
+              <mi>x</mi>
+             </mrow>
+             <mo>-</mo>
+             <mn>1</mn>
+            </mrow>
+           </math>with respect to x, we can use the power rule of integration, which states that if <math xmlns='http://www.w3.org/1998/Math/MathML'>
+           <mrow>
+           <mi>f</mi>
+           <mo>&#8289;</mo>
+           <mo>(</mo>
+           <mi>x</mi>
+           <mo>)</mo>
+           <mo>=</mo>
+          </mrow>
+           <msup>
+            <mi>x</mi>
+            <mi>n</mi>
+           </msup>
+          </math>, then <math xmlns='http://www.w3.org/1998/Math/MathML'>
+           <mrow>
+           <mo>&int;</mo>
+            <mrow>
+             <mi>f</mi>
+             <mo>&#8289;</mo>
+             <mo>(</mo>
+             <mi>x</mi>
+             <mo>)</mo>
+            </mrow>
+            <mi>dx</mi>
+            <mo>&#8290;</mo>
+           </mrow>
+          </math> = <math xmlns='http://www.w3.org/1998/Math/MathML'>
+           <mrow>
+            <mi>C</mi>
+            <mo>+</mo>
+            <mfrac>
+             <msup>
+              <mi>x</mi>
+              <mrow>
+               <mi>n</mi>
+               <mo>+</mo>
+               <mn>1</mn>
+              </mrow>
+             </msup>
+             <mrow>
+              <mi>n</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+             </mrow>
+            </mfrac>
+           </mrow>
+          </math>
+          ,
+            where C is the constant of integration.</p>
+            <p>Using this rule, we can integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mrow>
+              <mn>2</mn>
+              <mo>&#8290;</mo>
+              <msup>
+               <mi>x</mi>
+               <mn>2</mn>
+              </msup>
+             </mrow>
+             <mo>+</mo>
+             <mrow>
+              <mn>3</mn>
+              <mo>&#8290;</mo>
+              <mi>x</mi>
+             </mrow>
+             <mo>-</mo>
+             <mn>1</mn>
+            </mrow>
+           </math> as follows:
+           <math xmlns='http://www.w3.org/1998/Math/MathML'>
+           <mrow>
+            <mrow>
+            <mo>&int;</mo>
+             <mn>2</mn>
+             <mo>&#8290;</mo>
+             <msup>
+              <mi>x</mi>
+              <mn>2</mn>
+             </msup>
+            </mrow>
+            <mo>+</mo>
+            <mrow>
+             <mn>3</mn>
+             <mo>&#8290;</mo>
+             <mi>x</mi>
+            </mrow>
+            <mo>-</mo>
+            <mn>1</mn>
+           </mrow>
+          </math> = <math xmlns='http://www.w3.org/1998/Math/MathML'>
+          <mrow>
+           <mi>C</mi>
+           <mo>+</mo>
+           <mfrac>
+            <mrow>
+             <mn>2</mn>
+             <mo>&#8290;</mo>
+             <msup>
+              <mi>x</mi>
+              <mn>3</mn>
+             </msup>
+            </mrow>
+            <mn>3</mn>
+           </mfrac>
+           <mo>+</mo>
+           <mfrac>
+            <mrow>
+             <mn>3</mn>
+             <mo>&#8290;</mo>
+             <msup>
+              <mi>x</mi>
+              <mn>2</mn>
+             </msup>
+            </mrow>
+            <mn>2</mn>
+           </mfrac>
+           <mo>-</mo>
+           <mi>x</mi>
+          </mrow>
+         </math>,
+            where C is the constant of integration. </p>
+            <p>Therefore, the indefinite integral of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mrow>
+              <mn>2</mn>
+              <mo>&#8290;</mo>
+              <msup>
+               <mi>x</mi>
+               <mn>2</mn>
+              </msup>
+             </mrow>
+             <mo>+</mo>
+             <mrow>
+              <mn>3</mn>
+              <mo>&#8290;</mo>
+              <mi>x</mi>
+             </mrow>
+             <mo>-</mo>
+             <mn>1</mn>
+            </mrow>
+           </math> with respect to x is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+           <mrow>
+            <mi>C</mi>
+            <mo>+</mo>
+            <mfrac>
+             <mrow>
+              <mn>2</mn>
+              <mo>&#8290;</mo>
+              <msup>
+               <mi>x</mi>
+               <mn>3</mn>
+              </msup>
+             </mrow>
+             <mn>3</mn>
+            </mfrac>
+            <mo>+</mo>
+            <mfrac>
+             <mrow>
+              <mn>3</mn>
+              <mo>&#8290;</mo>
+              <msup>
+               <mi>x</mi>
+               <mn>2</mn>
+              </msup>
+             </mrow>
+             <mn>2</mn>
+            </mfrac>
+            <mo>-</mo>
+            <mi>x</mi>
+           </mrow>
+          </math>.</p>`
     })
 }
 
