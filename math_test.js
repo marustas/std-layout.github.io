@@ -325,34 +325,492 @@ where C is the constant of integration. </p>
        </math>
         with respect to x:`,
         adv: `
-        <p>To integrate e^x*cos(x) with respect to x, we can use integration by parts: </p>
+        <p>To integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+       </math> with respect to x, we can use integration by parts: </p>
 
-        <p>Let u = e^x and dv = cos(x) dx. Then, du/dx = e^x and v = sin(x).</p>        
+        <p>Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+        <mi>u</mi>
+        <mo>=</mo>
+        <msup>
+         <mi>e</mi>
+         <mi>x</mi>
+        </msup>
+        </mrow>
+       </math> and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+       <mrow>
+       <mi>d</mi>
+       <mi>v</mi>
+<mo>=</mo>
+<mi>cos</mi>
+<mo>&#8289;</mo>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+<mi>d</mi>
+<mi>x</mi>
+       </mrow>
+      </math>. Then, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+      <mfrac>
+       <mi>du</mi>
+       <mi>dx</mi>
+      </mfrac>
+      <mo>=</mo>
+      <msup>
+      <mi>e</mi>
+      <mi>x</mi>
+     </msup>
+     </math> and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+      <mi>v</mi>
+     <mo>=</mo>
+     <mi>sin</mi>
+     <mo>(</mo>
+     <mi>x</mi>
+     <mo>)</mo>
+    </math>.</p>        
 
         <p>
         Using the formula for integration by parts, we have:
-        ∫e^xcos(x) dx = e^xsin(x) - ∫e^x*sin(x) dx
+        <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <mrow>
+ <mo>&int;</mo>
+  <msup>
+   <mi>e</mi>
+   <mi>x</mi>
+  </msup>
+  <mo>&#8290;</mo>
+  <mrow>
+   <mi>cos</mi>
+   <mo>&#8289;</mo>
+   <mo>(</mo>
+   <mi>x</mi>
+   <mo>)</mo>
+   <mi>d</mi>
+   <mi>x</mi>
+   <mo>&#8290;</mo>
+  </mrow>
+ </mrow>
+ <mo>=</mo>
+ <mrow>
+ <msup>
+  <mi>e</mi>
+  <mi>x</mi>
+ </msup>
+ <mo>&#8290;</mo>
+ <mrow>
+  <mi>sin</mi>
+  <mo>&#8289;</mo>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+<mo>-</mo>
+<mrow>
+<mo>&int;</mo>
+ <msup>
+  <mi>e</mi>
+  <mi>x</mi>
+ </msup>
+ <mo>&#8290;</mo>
+ <mrow>
+  <mi>sin</mi>
+  <mo>&#8289;</mo>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+  <mi>d</mi>
+  <mi>x</mi>
+  <mo>&#8290;</mo>
+ </mrow>
+</mrow>
+</math>
         </p>
         <p>
-        We now need to integrate e^x*sin(x). Again, we can use integration by parts.
-        Let u = e^x and dv = sin(x) dx. Then, du/dx = e^x and v = -cos(x).
+        We now need to integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>sin</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+       </math>. Again, we can use integration by parts.
+       Let <math xmlns='http://www.w3.org/1998/Math/MathML'>
+       <mrow>
+       <mi>u</mi>
+       <mo>=</mo>
+       <msup>
+        <mi>e</mi>
+        <mi>x</mi>
+       </msup>
+       </mrow>
+      </math> and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+      <mrow>
+      <mi>d</mi>
+      <mi>v</mi>
+<mo>=</mo>
+<mi>sin</mi>
+<mo>&#8289;</mo>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+<mi>d</mi>
+<mi>x</mi>
+      </mrow>
+     </math>. Then, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+     <mfrac>
+      <mi>du</mi>
+      <mi>dx</mi>
+     </mfrac>
+     <mo>=</mo>
+     <msup>
+     <mi>e</mi>
+     <mi>x</mi>
+    </msup>
+    </math> and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+     <mi>v</mi>
+    <mo>=</mo>
+    <mo>-</mo>
+    <mi>cos</mi>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </math>.
         </p>
 
-        <p>Using the formula for integration by parts, we have: ∫e^xsin(x) dx = -e^xcos(x) + ∫e^x*cos(x) dx 
+        <p>Using the formula for integration by parts, we have: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+        <mo>&int;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+          <mi>d</mi>
+          <mi>x</mi>
+          <mo>&#8290;</mo>
+         </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+        <mo>-</mo>
+        <msup>
+         <mi>e</mi>
+         <mi>x</mi>
+        </msup>
+        <mo>&#8290;</mo>
+        <mrow>
+         <mi>cos</mi>
+         <mo>&#8289;</mo>
+         <mo>(</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+       </mrow>
+       <mo>+</mo>
+       <mrow>
+       <mo>&int;</mo>
+        <msup>
+         <mi>e</mi>
+         <mi>x</mi>
+        </msup>
+        <mo>&#8290;</mo>
+        <mrow>
+         <mi>cos</mi>
+         <mo>&#8289;</mo>
+         <mo>(</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+         <mi>d</mi>
+         <mi>x</mi>
+         <mo>&#8290;</mo>
+        </mrow>
+       </mrow>
+       </math>.
+       </p>
+       <p>
         We can substitute this result back into our original equation:
-        ∫e^xcos(x) dx = e^xsin(x) - (-e^xcos(x) + ∫e^xcos(x) dx)
-        </p>
-
-        <p>Simplifying, we get: ∫e^xcos(x) dx = e^xsin(x) + e^xcos(x) - ∫e^xcos(x) dx</p>
-        <p>Rearranging, we get: 2∫e^xcos(x) dx = e^xsin(x) + e^x*cos(x)</p>
-
+ <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+        <mo>&int;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+         <mi>d</mi>
+         <mi>x</mi>
+        </mrow>
+<mo>=</mo>
+       <mrow>
+        <mrow>
+         <mo>&#8290;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>sin</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+         <mo>&#8290;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>-</mo>
+        <mrow>
+       <mo>&int;</mo>
+        <msup>
+         <mi>e</mi>
+         <mi>x</mi>
+        </msup>
+        <mo>&#8290;</mo>
+        <mrow>
+         <mi>cos</mi>
+         <mo>&#8289;</mo>
+         <mo>(</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+         <mi>d</mi>
+         <mi>x</mi>
+         <mo>&#8290;</mo>
+        </mrow>
+       </mrow>
+      </math>
+        <p>Rearranging, we get: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+        <mn>2</mn>
+        <mo>&int;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+         <mi>d</mi>
+         <mi>x</mi>
+        </mrow>
+<mo>=</mo>
+       <mrow>
+        <mrow>
+         <mo>&#8290;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>sin</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+         <mo>&#8290;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+      </math>
+      </p>
         <p>
         Dividing both sides by 2, we get:
-        ∫e^x*cos(x) dx = (1/2)e^xsin(x) + (1/2)e^xcos(x) + C,
+        <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+        <mo>&int;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+         <mi>d</mi>
+         <mi>x</mi>
+        </mrow>
+<mo>=</mo>
+       <mrow>
+        <mi>C</mi>
+        <mo>+</mo>
+        <mrow>
+         <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+         </mfrac>
+         <mo>&#8290;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>sin</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+         <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+         </mfrac>
+         <mo>&#8290;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+       </mrow>
+      </math>,
         where C is the constant of integration.
         </p>
         <p>
-        Therefore, the integral of e^x*cos(x) with respect to x is (1/2)e^xsin(x) + (1/2)e^xcos(x) + C.
+        Therefore, the integral of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+       </math> with respect to x is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+       <mrow>
+        <mi>C</mi>
+        <mo>+</mo>
+        <mrow>
+         <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+         </mfrac>
+         <mo>&#8290;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>sin</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+         <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+         </mfrac>
+         <mo>&#8290;</mo>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+       </mrow>
+      </math>.
         </p>`,
         a: [{ text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
         <mrow>
@@ -400,6 +858,10 @@ where C is the constant of integration. </p>
              <mi>C</mi>
              <mo>+</mo>
              <mrow>
+             <mfrac>
+             <mn>1</mn>
+             <mn>2</mn>
+             </mfrac>
               <msup>
                <mi>e</mi>
                <mi>x</mi>
