@@ -1,50 +1,617 @@
 const Questions = [{
         id: 0,
-        q: "What is the integral of 2x^2 + 3x - 1 with respect to x?",
-        a: [{ text: "x^3 + 1.5x^2 - x + C", isCorrect: true },
-            { text: "x^3 + 1.5x^2 - C", isCorrect: false },
-            { text: "x^2 + 1.5x - x + C", isCorrect: false },
-            { text: "2/3x^3 + 1.5/2x^2 - x + C", isCorrect: false }
+        q: `What is the integral of
+        <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <mrow>
+  <mrow>
+   <mn>2</mn>
+   <mo>&#8290;</mo>
+   <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+  <mo>+</mo>
+  <mrow>
+   <mn>3</mn>
+   <mo>&#8290;</mo>
+   <mi>x</mi>
+  </mrow>
+  <mo>-</mo>
+  <mn>1</mn>
+ </mrow>
+</math> 
+with respect to x?`,
+        a: [{ text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+         <mi>C</mi>
+         <mo>+</mo>
+         <msup>
+          <mi>x</mi>
+          <mn>3</mn>
+         </msup>
+         <mo>+</mo>
+         <mrow>
+          <mn>1.5</mn>
+          <mtext> </mtext>
+          <msup>
+           <mi>x</mi>
+           <mn>2</mn>
+          </msup>
+         </mrow>
+         <mo>-</mo>
+         <mi>x</mi>
+        </mrow>
+       </math>`, isCorrect: true },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mrow>
+             </mrow>
+             <msup>
+              <mi>x</mi>
+              <mn>3</mn>
+             </msup>
+             <mo>+</mo>
+             <mrow>
+              <mn>1.5</mn>
+              <mtext> </mtext>
+              <msup>
+               <mi>x</mi>
+               <mn>2</mn>
+              </msup>
+              <mo>-</mo>
+              <mi>C</mi>
+             </mrow>
+            </mrow>
+           </math>`, isCorrect: false },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <msup>
+              <mi>x</mi>
+              <mn>2</mn>
+             </msup>
+             <mo>+</mo>
+             <mrow>
+              <mn>1.5</mn>
+              <mtext> </mtext>
+              <mi>x</mi>
+             </mrow>
+             <mo>-</mo>
+             <mi>x</mi>
+            </mrow>
+           </math>
+           `, isCorrect: false },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <mfrac>
+              <mn>2</mn>
+              <mrow>
+               <mn>3</mn>
+               <mo>&#8290;</mo>
+               <msup>
+                <mi>x</mi>
+                <mn>3</mn>
+               </msup>
+              </mrow>
+             </mfrac>
+             <mo>+</mo>
+             <mfrac>
+              <mn>1.5</mn>
+              <mrow>
+               <mn>2</mn>
+               <mo>&#8290;</mo>
+               <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+               </msup>
+              </mrow>
+             </mfrac>
+             <mo>-</mo>
+             <mi>x</mi>
+            </mrow>
+           </math>
+           `, isCorrect: false }
         ]
 
     },
     {
         id: 1,
-        q: "Evaluate the integral of e^x * cos(x) with respect to x:",
-        a: [{ text: "e^x * sin(x) + C", isCorrect: false },
-            { text: "e^x * cos(x) + C", isCorrect: true },
-            { text: "e^x * (sin(x) + cos(x)) + C", isCorrect: false },
-            { text: "e^x * (cos(x) - sin(x)) + C", isCorrect: false }
+        q: `Evaluate the integral of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+         <msup>
+          <mi>e</mi>
+          <mi>x</mi>
+         </msup>
+         <mo>&#8290;</mo>
+         <mrow>
+          <mi>cos</mi>
+          <mo>&#8289;</mo>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+         </mrow>
+        </mrow>
+       </math>
+        with respect to x:`,
+        a: [{ text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+         <mi>C</mi>
+         <mo>+</mo>
+         <mrow>
+          <msup>
+           <mi>e</mi>
+           <mi>x</mi>
+          </msup>
+          <mo>&#8290;</mo>
+          <mrow>
+           <mi>sin</mi>
+           <mo>&#8289;</mo>
+           <mo>(</mo>
+           <mi>x</mi>
+           <mo>)</mo>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+       `, isCorrect: false },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <mrow>
+              <msup>
+               <mi>e</mi>
+               <mi>x</mi>
+              </msup>
+              <mo>&#8290;</mo>
+              <mrow>
+               <mi>cos</mi>
+               <mo>&#8289;</mo>
+               <mo>(</mo>
+               <mi>x</mi>
+               <mo>)</mo>
+              </mrow>
+             </mrow>
+            </mrow>
+           </math>`, isCorrect: true },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <mrow>
+              <msup>
+               <mi>e</mi>
+               <mi>x</mi>
+              </msup>
+              <mo>&#8290;</mo>
+              <mrow>
+               <mo>(</mo>
+               <mrow>
+                <mrow>
+                 <mi>sin</mi>
+                 <mo>&#8289;</mo>
+                 <mo>(</mo>
+                 <mi>x</mi>
+                 <mo>)</mo>
+                </mrow>
+                <mo>+</mo>
+                <mrow>
+                 <mi>cos</mi>
+                 <mo>&#8289;</mo>
+                 <mo>(</mo>
+                 <mi>x</mi>
+                 <mo>)</mo>
+                </mrow>
+               </mrow>
+               <mo>)</mo>
+              </mrow>
+             </mrow>
+            </mrow>
+           </math>`, isCorrect: false },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <mrow>
+              <msup>
+               <mi>e</mi>
+               <mi>x</mi>
+              </msup>
+              <mo>&#8290;</mo>
+              <mrow>
+               <mo>(</mo>
+               <mrow>
+                <mrow>
+                 <mi>cos</mi>
+                 <mo>&#8289;</mo>
+                 <mo>(</mo>
+                 <mi>x</mi>
+                 <mo>)</mo>
+                </mrow>
+                <mo>-</mo>
+                <mrow>
+                 <mi>sin</mi>
+                 <mo>&#8289;</mo>
+                 <mo>(</mo>
+                 <mi>x</mi>
+                 <mo>)</mo>
+                </mrow>
+               </mrow>
+               <mo>)</mo>
+              </mrow>
+             </mrow>
+            </mrow>
+           </math>
+           `, isCorrect: false }
         ]
 
     },
     {
         id: 2,
-        q: "Calculate the integral of 1/x with respect to x:",
-        a: [{ text: "ln|x| + C", isCorrect: true },
-            { text: " ln(x) + C", isCorrect: false },
-            { text: "x + C", isCorrect: false },
-            { text: "1/2x^2 + C", isCorrect: false }
+        q: `Calculate the integral of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mfrac>
+         <mn>1</mn>
+         <mi>x</mi>
+        </mfrac>
+       </math> with respect to x:`,
+        a: [{ text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+         <mi>C</mi>
+         <mo>+</mo>
+         <mrow>
+          <mi>ln</mi>
+          <mrow>
+          <mo>|</mo>
+          <mi>x</mi>
+          <mo>|</mo>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>`, isCorrect: true },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <mrow>
+              <mi>ln</mi>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>)</mo>
+             </mrow>
+            </mrow>
+           </math>`, isCorrect: false },
+            { text: `
+            <math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <mrow>
+              <mi>x</mi>
+             </mrow>
+            </mrow>
+           </math>`, isCorrect: false },
+            { text: `
+            <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <mrow>
+  <mi>C</mi>
+  <mo>+</mo>
+  <mfrac>
+   <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+   </msup>
+   <mn>2</mn>
+  </mfrac>
+ </mrow>
+</math>
+`, isCorrect: false }
         ]
 
     },
     {
         id: 3,
-        q: "Find the integral of (x^2 + 2x + 1) / (x + 1) with respect to x:",
-        a: [{ text: "x^2 + 2x - 3ln|x+1| + C", isCorrect: true },
-            { text: "x^2 + 2x + ln|x+1| + C", isCorrect: false },
-            { text: "x^2 + 2x - ln|x+1| + C", isCorrect: false },
-            { text: "x^2 + 2x + 3ln|x+1| + C", isCorrect: false }
+        q: `Find the integral of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mfrac>
+         <mrow>
+          <msup>
+           <mi>x</mi>
+           <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <mrow>
+           <mn>2</mn>
+           <mo>&#8290;</mo>
+           <mi>x</mi>
+          </mrow>
+          <mo>+</mo>
+          <mn>1</mn>
+         </mrow>
+         <mrow>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+         </mrow>
+        </mfrac>
+       </math> with respect to x:`,
+        a: [{ text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+         <mi>C</mi>
+         <mo>+</mo>
+         <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+         </msup>
+         <mo>+</mo>
+         <mrow>
+          <mn>2</mn>
+          <mo>&#8290;</mo>
+          <mi>x</mi>
+         </mrow>
+         <mo>-</mo>
+         <mrow>
+          <mn>3</mn>
+          <mo>&#8290;</mo>
+          <mrow>
+           <mi>ln</mi>
+           <mo>|</mo>
+           <mrow>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+           <mo>|</mo>
+           </mrow>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>`, isCorrect: true },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <msup>
+              <mi>x</mi>
+              <mn>2</mn>
+             </msup>
+             <mo>+</mo>
+             <mrow>
+              <mn>2</mn>
+              <mo>&#8290;</mo>
+              <mi>x</mi>
+             </mrow>
+             <mo>+</mo>
+             <mrow>
+              <mi>ln</mi>
+              <mo>&#8289;</mo>
+              <mo>|</mo>
+              <mrow>
+               <mi>x</mi>
+               <mo>+</mo>
+               <mn>1</mn>
+              </mrow>
+              <mo>|</mo>
+             </mrow>
+            </mrow>
+           </math>
+           `, isCorrect: false },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <msup>
+              <mi>x</mi>
+              <mn>2</mn>
+             </msup>
+             <mo>+</mo>
+             <mrow>
+              <mn>2</mn>
+              <mo>&#8290;</mo>
+              <mi>x</mi>
+             </mrow>
+             <mo>-</mo>
+             <mrow>
+              <mi>ln</mi>
+              <mo>&#8289;</mo>
+              <mo>|</mo>
+              <mrow>
+               <mi>x</mi>
+               <mo>+</mo>
+               <mn>1</mn>
+              <mo>|</mo>
+              </mrow>
+             </mrow>
+            </mrow>
+           </math>`, isCorrect: false },
+            { text: `
+            <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ <mrow>
+  <mi>C</mi>
+  <mo>+</mo>
+  <msup>
+   <mi>x</mi>
+   <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <mrow>
+   <mn>2</mn>
+   <mo>&#8290;</mo>
+   <mi>x</mi>
+  </mrow>
+  <mo>+</mo>
+  <mrow>
+   <mn>3</mn>
+   <mo>&#8290;</mo>
+   <mrow>
+    <mi>ln</mi>
+    <mo>&#8289;</mo>
+    <mo>|</mo>
+    <mrow>
+     <mi>x</mi>
+     <mo>+</mo>
+     <mn>1</mn>
+    </mrow>
+    <mo>|</mo>
+   </mrow>
+  </mrow>
+ </mrow>
+</math>
+`, isCorrect: false }
         ]
-
     },
     {
         id: 4,
-        q: "Evaluate the integral of (2x + 1) / (x^2 + x + 1) with respect to x:",
-        a: [{ text: "ln|x^2 + x + 1| + C", isCorrect: false },
-            { text: "2ln|x^2 + x + 1| + C", isCorrect: false },
-            { text: "ln|x^2 + x + 1| - 2ln|x+1| + C", isCorrect: false },
-            { text: "ln|x^2 + x + 1| + 2ln|x+1| + C", isCorrect: true }
+        q: `Evaluate the integral of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mfrac>
+         <mrow>
+          <mrow>
+           <mn>2</mn>
+           <mo>&#8290;</mo>
+           <mi>x</mi>
+          </mrow>
+          <mo>+</mo>
+          <mn>1</mn>
+         </mrow>
+         <mrow>
+          <msup>
+           <mi>x</mi>
+           <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+         </mrow>
+        </mfrac>
+       </math> with respect to x:`,
+        a: [{ text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <mrow>
+         <mi>C</mi>
+         <mo>+</mo>
+         <mrow>
+          <mi>ln</mi>
+          <mo>&#8289;</mo>
+          <mo>|</mo>
+          <mrow>
+           <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+           </msup>
+           <mo>+</mo>
+           <mi>x</mi>
+           <mo>+</mo>
+           <mn>1</mn>
+           <mo>|</mo>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>`, isCorrect: false },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <mrow>
+              <mn>2</mn>
+              <mo>&#8290;</mo>
+              <mrow>
+               <mi>ln</mi>
+               <mo>&#8289;</mo>
+               <mo>|</mo>
+               <mrow>
+                <msup>
+                 <mi>x</mi>
+                 <mn>2</mn>
+                </msup>
+                <mo>+</mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+               </mrow>
+               <mo>|</mo>
+              </mrow>
+             </mrow>
+            </mrow>
+           </math>`, isCorrect: false },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <mrow>
+              <mi>ln</mi>
+              <mo>&#8289;</mo>
+              <mo>|</mo>
+              <mrow>
+               <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+               </msup>
+               <mo>+</mo>
+               <mi>x</mi>
+               <mo>+</mo>
+               <mn>1</mn>
+              </mrow>
+              <mo>|</mo>
+             </mrow>
+             <mo>-</mo>
+             <mrow>
+              <mn>2</mn>
+              <mo>&#8290;</mo>
+              <mrow>
+               <mi>ln</mi>
+               <mo>&#8289;</mo>
+               <mo>|</mo>
+               <mrow>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+               </mrow>
+               <mo>|</mo>
+              </mrow>
+             </mrow>
+            </mrow>
+           </math>`, isCorrect: false },
+            { text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
+            <mrow>
+             <mi>C</mi>
+             <mo>+</mo>
+             <mrow>
+              <mi>ln</mi>
+              <mo>&#8289;</mo>
+              <mo>|</mo>
+              <mrow>
+               <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+               </msup>
+               <mo>+</mo>
+               <mi>x</mi>
+               <mo>+</mo>
+               <mn>1</mn>
+              </mrow>
+              <mo>|</mo>
+              <mo>&#8289;</mo>
+             </mrow>
+             <mo>+</mo>
+             <mrow>
+              <mn>2</mn>
+              <mo>&#8290;</mo>
+              <mrow>
+               <mi>ln</mi>
+               <mo>&#8289;</mo>
+               <mo>|</mo>
+               <mrow>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+               </mrow>
+               <mo>&#8289;</mo>
+               <mo>|</mo>
+              </mrow>
+             </mrow>
+            </mrow>
+           </math>`, isCorrect: true }
         ]
 
     }
@@ -66,7 +633,7 @@ function iterate(id) {
 
 
     // Setting the question text
-    question.innerText = Questions[id].q;
+    question.innerHTML = Questions[id].q;
 
     // Getting the options
     const op1 = document.getElementById('op1');
@@ -76,10 +643,10 @@ function iterate(id) {
 
 
     // Providing option text
-    op1.innerText = Questions[id].a[0].text;
-    op2.innerText = Questions[id].a[1].text;
-    op3.innerText = Questions[id].a[2].text;
-    op4.innerText = Questions[id].a[3].text;
+    op1.innerHTML = Questions[id].a[0].text;
+    op2.innerHTML = Questions[id].a[1].text;
+    op3.innerHTML = Questions[id].a[2].text;
+    op4.innerHTML = Questions[id].a[3].text;
 
     // Providing the true or false value to the options
     op1.value = Questions[id].a[0].isCorrect;
