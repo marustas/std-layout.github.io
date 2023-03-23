@@ -654,9 +654,9 @@ function iterate(id) {
     // Show selection for op1
     op1.addEventListener("click", () => {
         op1.style.backgroundColor = "lightgoldenrodyellow";
-        op2.style.backgroundColor = "lightskyblue";
-        op3.style.backgroundColor = "lightskyblue";
-        op4.style.backgroundColor = "lightskyblue";
+        op2.style.backgroundColor = "#3b90e5";
+        op3.style.backgroundColor = "#3b90e5";
+        op4.style.backgroundColor = "#3b90e5";
         selected = op1.value;
         if (selected == "true") {
             count++;
@@ -665,10 +665,10 @@ function iterate(id) {
 
     // Show selection for op2
     op2.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightskyblue";
+        op1.style.backgroundColor = "#3b90e5";
         op2.style.backgroundColor = "lightgoldenrodyellow";
-        op3.style.backgroundColor = "lightskyblue";
-        op4.style.backgroundColor = "lightskyblue";
+        op3.style.backgroundColor = "#3b90e5";
+        op4.style.backgroundColor = "#3b90e5";
         selected = op2.value;
         if (selected == "true") {
             count++;
@@ -677,10 +677,10 @@ function iterate(id) {
 
     // Show selection for op3
     op3.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightskyblue";
-        op2.style.backgroundColor = "lightskyblue";
+        op1.style.backgroundColor = "#3b90e5";
+        op2.style.backgroundColor = "#3b90e5";
         op3.style.backgroundColor = "lightgoldenrodyellow";
-        op4.style.backgroundColor = "lightskyblue";
+        op4.style.backgroundColor = "#3b90e5";
         selected = op3.value;
         if (selected == "true") {
             count++;
@@ -689,9 +689,9 @@ function iterate(id) {
 
     // Show selection for op4
     op4.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightskyblue";
-        op2.style.backgroundColor = "lightskyblue";
-        op3.style.backgroundColor = "lightskyblue";
+        op1.style.backgroundColor = "#3b90e5";
+        op2.style.backgroundColor = "#3b90e5";
+        op3.style.backgroundColor = "#3b90e5";
         op4.style.backgroundColor = "lightgoldenrodyellow";
         selected = op4.value;
         if (selected == "true") {

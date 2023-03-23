@@ -293,12 +293,12 @@ a {
     width: 19vw;
     height: 10vh;
     font-size: larger;
-    background-color: lightskyblue;
+    background-color: #7abcff;
     border-radius: 25%;
 }
 
 .option:hover {
-    background-color: lightgoldenrodyellow;
+    background-color: #3b90e5;
 }
 
 .navigation {
@@ -312,18 +312,24 @@ a {
 }
 
 .next,
-.previous,
-.evaluate,
-.finish {
+.previous {
     font-size: large;
     width: 20%;
     color: #FF665E;
     background-color: white;
 }
 
+.help,
+.finish {
+    font-size: large;
+    width: 20%;
+    color: #FF665E;
+    background-color: rgb(233, 231, 231);
+}
+
 .previous:hover,
 .next:hover,
-.evaluate:hover,
+.help:hover,
 .finish:hover {
     color: #FF665E;
     background-color: #444;
