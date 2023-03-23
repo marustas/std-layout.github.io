@@ -324,7 +324,36 @@ where C is the constant of integration. </p>
         </mrow>
        </math>
         with respect to x:`,
-        adv: `Answer 2`,
+        adv: `
+        <p>To integrate e^x*cos(x) with respect to x, we can use integration by parts: </p>
+
+        <p>Let u = e^x and dv = cos(x) dx. Then, du/dx = e^x and v = sin(x).</p>        
+
+        <p>
+        Using the formula for integration by parts, we have:
+        ∫e^xcos(x) dx = e^xsin(x) - ∫e^x*sin(x) dx
+        </p>
+        <p>
+        We now need to integrate e^x*sin(x). Again, we can use integration by parts.
+        Let u = e^x and dv = sin(x) dx. Then, du/dx = e^x and v = -cos(x).
+        </p>
+
+        <p>Using the formula for integration by parts, we have: ∫e^xsin(x) dx = -e^xcos(x) + ∫e^x*cos(x) dx 
+        We can substitute this result back into our original equation:
+        ∫e^xcos(x) dx = e^xsin(x) - (-e^xcos(x) + ∫e^xcos(x) dx)
+        </p>
+
+        <p>Simplifying, we get: ∫e^xcos(x) dx = e^xsin(x) + e^xcos(x) - ∫e^xcos(x) dx</p>
+        <p>Rearranging, we get: 2∫e^xcos(x) dx = e^xsin(x) + e^x*cos(x)</p>
+
+        <p>
+        Dividing both sides by 2, we get:
+        ∫e^x*cos(x) dx = (1/2)e^xsin(x) + (1/2)e^xcos(x) + C,
+        where C is the constant of integration.
+        </p>
+        <p>
+        Therefore, the integral of e^x*cos(x) with respect to x is (1/2)e^xsin(x) + (1/2)e^xcos(x) + C.
+        </p>`,
         a: [{ text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
         <mrow>
          <mi>C</mi>
