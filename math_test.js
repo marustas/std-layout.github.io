@@ -578,7 +578,6 @@ with respect to x?`,
              <mo>+</mo>
              <mrow>
               <mi>ln</mi>
-              <mo>&#8289;</mo>
               <mo>|</mo>
               <mrow>
                <msup>
@@ -591,22 +590,18 @@ with respect to x?`,
                <mn>1</mn>
               </mrow>
               <mo>|</mo>
-              <mo>&#8289;</mo>
              </mrow>
              <mo>+</mo>
              <mrow>
               <mn>2</mn>
-              <mo>&#8290;</mo>
               <mrow>
                <mi>ln</mi>
-               <mo>&#8289;</mo>
                <mo>|</mo>
                <mrow>
                 <mi>x</mi>
                 <mo>+</mo>
                 <mn>1</mn>
                </mrow>
-               <mo>&#8289;</mo>
                <mo>|</mo>
               </mrow>
              </mrow>
