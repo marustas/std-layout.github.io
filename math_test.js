@@ -22,8 +22,8 @@ const Questions = [{
  </mrow>
 </math>
 with respect to x?`,
-        adv: `
-        <div class = "message">
+        adv1: `
+        <div class = "message" id ="message1">
         <img src="ai.png">
 <p>
 To integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -94,8 +94,9 @@ To integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
 </math>
 ,
 where C is the constant of integration.</p>
-</div>
-<div class ="message">
+</div>`,
+        adv2: `
+<div class ="message" id ="message2">
 <img src="ai.png">
 <p>Using this rule, we can integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
@@ -1388,8 +1389,15 @@ function iterate(id) {
         }
     })
     const help = document.getElementsByClassName("help");
+    var c = 0;
     help[0].addEventListener("click", () => {
-        advice[0].innerHTML = Questions[id].adv;
+        c++;
+        if (c == 1) {
+            advice[0].innerHTML = Questions[id].adv1;
+        } else {
+            advice[0].innerHTML = Questions[id].adv1 + Questions[id].adv2;
+        }
+
     })
 
 
