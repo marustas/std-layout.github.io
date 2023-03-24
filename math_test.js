@@ -23,7 +23,10 @@ const Questions = [{
 </math>
 with respect to x?`,
         adv: `
-<p>To integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
+        <div class = "message">
+        <img src="ai.png">
+<p>
+To integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mn>2</mn>
@@ -91,6 +94,9 @@ with respect to x?`,
 </math>
 ,
 where C is the constant of integration.</p>
+</div>
+<div class ="message">
+<img src="ai.png">
 <p>Using this rule, we can integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
@@ -212,7 +218,8 @@ where C is the constant of integration. </p>
 <mo>-</mo>
 <mi>x</mi>
 </mrow>
-</math>.</p>`,
+</math>.</p>
+</div>`,
         a: [{ text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
         <mrow>
          <mi>C</mi>
@@ -1456,10 +1463,9 @@ document.addEventListener("click", () => {
     if (id == 4) {
         finish.style.visibility = "visible";
         next.style.visibility = "hidden"
-    }
-    else {
-       finish.style.visibility = "hidden";
-       next.style.visibility = "visible"
+    } else {
+        finish.style.visibility = "hidden";
+        next.style.visibility = "visible"
     }
 
 })
