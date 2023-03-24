@@ -332,7 +332,9 @@ where C is the constant of integration. </p>
         </mrow>
        </math>
         with respect to x:`,
-        adv: `
+        adv1: `
+        <div class ="message">
+        <img src = "ai.png">
         <p>To integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
         <mrow>
          <msup>
@@ -390,7 +392,6 @@ where C is the constant of integration. </p>
      <mi>x</mi>
      <mo>)</mo>
     </math>.</p>
-
         <p>
         Using the formula for integration by parts, we have:
         <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -507,7 +508,11 @@ where C is the constant of integration. </p>
     <mo>)</mo>
    </math>.
         </p>
-
+        </div>
+`,
+        adv2: `
+        <div class ="message">
+        <img src = "ai.png">
         <p>Using the formula for integration by parts, we have: <math xmlns='http://www.w3.org/1998/Math/MathML'>
         <mrow>
         <mo>&int;</mo>
@@ -819,7 +824,10 @@ where C is the constant of integration. </p>
         </mrow>
        </mrow>
       </math>.
-        </p>`,
+        </p>
+        </div>
+
+        `,
         a: [{ text: `<math xmlns='http://www.w3.org/1998/Math/MathML'>
         <mrow>
          <mi>C</mi>
