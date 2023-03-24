@@ -20,7 +20,7 @@ const Questions = [{
   <mo>-</mo>
   <mn>1</mn>
  </mrow>
-</math> 
+</math>
 with respect to x?`,
         adv: `
 <p>To integrate <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -381,7 +381,7 @@ where C is the constant of integration. </p>
      <mo>(</mo>
      <mi>x</mi>
      <mo>)</mo>
-    </math>.</p>        
+    </math>.</p>
 
         <p>
         Using the formula for integration by parts, we have:
@@ -1424,4 +1424,42 @@ previous.addEventListener("click", () => {
         iterate(id);
         console.log(id);
     }
+})
+
+const difficulty = document.getElementsByClassName('difficulty')[0];
+document.addEventListener("click", () => {
+    start = false;
+    if (id == 1) {
+        difficulty.style.backgroundColor = "#00ff00";
+        difficulty.innerHTML = "Easy";
+    }
+    if (id == 2) {
+        difficulty.style.backgroundColor = "#ffff00";
+        difficulty.innerHTML = "Medium";
+    }
+    if (id == 3) {
+        difficulty.style.backgroundColor = "#ff0000";
+        difficulty.innerHTML = "Hard";
+    }
+    if (id == 4) {
+        difficulty.style.backgroundColor = "#ff0000";
+        difficulty.innerHTML = "Hard";
+    }
+    if (id == 0) {
+        difficulty.style.backgroundColor = "#00ff00";
+        difficulty.innerHTML = "Easy";
+    }
+})
+const finish = document.getElementsByClassName('finish')[0];
+document.addEventListener("click", () => {
+    start = false;
+    if (id == 4) {
+        finish.style.visibility = "visible";
+        next.style.visibility = "hidden"
+    }
+    else {
+       finish.style.visibility = "hidden";
+       next.style.visibility = "visible"
+    }
+
 })

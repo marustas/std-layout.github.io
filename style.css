@@ -264,6 +264,7 @@ a {
     background-color: #c7dddf;
     font-size: x-large;
     text-align: center;
+    margin-top:2px;
 }
 
 .result {
@@ -325,6 +326,9 @@ a {
     width: 20%;
     color: #FF665E;
     background-color: rgb(233, 231, 231);
+}
+.finish {
+  visibility: hidden;
 }
 
 .previous:hover,
@@ -418,3 +422,12 @@ a {
     width: 70%;
     align-self: center;
 }
+.difficulty {
+    font-size: 24px;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: rgb(0, 255, 00);
+  }
